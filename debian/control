@@ -1,0 +1,61 @@
+Source: juk
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Pino Toscano <pino@debian.org>,
+           Sune Vuorela <sune@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+Build-Depends: cmake (>= 3.1~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.72.0~),
+               gettext,
+               libkf5completion-dev (>= 5.72.0~),
+               libkf5config-dev (>= 5.72.0~),
+               libkf5coreaddons-dev (>= 5.72.0~),
+               libkf5crash-dev (>= 5.72.0~),
+               libkf5dbusaddons-dev (>= 5.72.0~),
+               libkf5doctools-dev (>= 5.72.0~),
+               libkf5globalaccel-dev (>= 5.72.0~),
+               libkf5i18n-dev (>= 5.72.0~),
+               libkf5iconthemes-dev (>= 5.72.0~),
+               libkf5itemmodels-dev (>= 5.72.0~),
+               libkf5jobwidgets-dev (>= 5.72.0~),
+               libkf5kio-dev (>= 5.72.0~),
+               libkf5notifications-dev (>= 5.72.0~),
+               libkf5textwidgets-dev (>= 5.72.0~),
+               libkf5wallet-dev (>= 5.72.0~),
+               libkf5widgetsaddons-dev (>= 5.72.0~),
+               libkf5windowsystem-dev (>= 5.72.0~),
+               libkf5xmlgui-dev (>= 5.72.0~),
+               libopusfile-dev,
+               libphonon4qt5-dev (>= 4.6.60~),
+               libphonon4qt5experimental-dev,
+               libqt5svg5-dev (>= 5.10.0~),
+               libtag1-dev (>= 1.6),
+               pkg-kde-tools (>= 0.15.16),
+               qtbase5-dev (>= 5.10.0~),
+Standards-Version: 4.5.1
+Homepage: https://juk.kde.org/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/juk
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/juk.git
+Rules-Requires-Root: no
+
+Package: juk
+Section: sound
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: k3b
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
+Description: music jukebox / music player
+ JuK is a powerful music player capable of managing a large music collection.
+ .
+ Some of JuK's features include:
+  * Music collection, playlists, and smart playlists
+  * Tag editing support, including the ability to edit multiple files at once
+  * Tag-based music file organization and renaming
+  * CD burning support using k3b
+  * Album art using Google Image Search
+ .
+ This package is part of the KDE multimedia module.

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TagEditor</class>
+ <widget class="QWidget" name="TagEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>885</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="tagEditorLayout">
+     <item row="0" column="3" colspan="7">
+      <widget class="QLabel" name="fileNameLabel">
+       <property name="text">
+        <string>F&amp;ile name:</string>
+       </property>
+       <property name="buddy">
+        <cstring>fileNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="trackLabel">
+       <property name="text">
+        <string>T&amp;rack:</string>
+       </property>
+       <property name="buddy">
+        <cstring>trackSpin</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="artistNameLabel">
+       <property name="text">
+        <string>&amp;Artist name:</string>
+       </property>
+       <property name="buddy">
+        <cstring>artistNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="albumNameLabel">
+       <property name="text">
+        <string>Album &amp;name:</string>
+       </property>
+       <property name="buddy">
+        <cstring>albumNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="genreLabel">
+       <property name="text">
+        <string>&amp;Genre:</string>
+       </property>
+       <property name="buddy">
+        <cstring>genreBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" colspan="7">
+      <widget class="KLineEdit" name="fileNameBox"/>
+     </item>
+     <item row="2" column="7">
+      <widget class="QLabel" name="yearLabel">
+       <property name="text">
+        <string>&amp;Year:</string>
+       </property>
+       <property name="buddy">
+        <cstring>yearSpin</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="KLineEdit" name="lengthBox">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="8">
+      <widget class="KLineEdit" name="bitrateBox">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="lengthLabel">
+       <property name="text">
+        <string>&amp;Length:</string>
+       </property>
+       <property name="buddy">
+        <cstring>lengthBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QLabel" name="bitrateLabel">
+       <property name="text">
+        <string>&amp;Bitrate:</string>
+       </property>
+       <property name="buddy">
+        <cstring>bitrateBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3" colspan="2">
+      <widget class="QLabel" name="commentLabel">
+       <property name="text">
+        <string>&amp;Comment:</string>
+       </property>
+       <property name="buddy">
+        <cstring>commentBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3" rowspan="4" colspan="7">
+      <widget class="KTextEdit" name="commentBox"/>
+     </item>
+     <item row="8" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="KComboBox" name="albumNameBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="2">
+      <widget class="KComboBox" name="genreBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="KComboBox" name="artistNameBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QSpinBox" name="trackSpin">
+       <property name="maximum">
+        <number>999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="8">
+      <widget class="QSpinBox" name="yearSpin">
+       <property name="maximum">
+        <number>9999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" rowspan="8">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="trackNameLabel">
+       <property name="text">
+        <string>Trac&amp;k name:</string>
+       </property>
+       <property name="buddy">
+        <cstring>trackNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="artistNameEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>artistNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="KLineEdit" name="trackNameBox"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="trackNameEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>trackNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QCheckBox" name="albumNameEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>albumNameBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="genreEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>genreBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QCheckBox" name="trackEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>trackSpin</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="9">
+      <widget class="QCheckBox" name="yearEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>yearSpin</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5" colspan="5">
+      <widget class="QCheckBox" name="commentEnable">
+       <property name="text">
+        <string>Enable</string>
+       </property>
+       <property name="associatedObjectName" stdset="0">
+        <cstring>commentBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6" rowspan="2">
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>ktextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>artistNameEnable</tabstop>
+  <tabstop>artistNameBox</tabstop>
+  <tabstop>trackNameEnable</tabstop>
+  <tabstop>trackNameBox</tabstop>
+  <tabstop>albumNameEnable</tabstop>
+  <tabstop>albumNameBox</tabstop>
+  <tabstop>genreEnable</tabstop>
+  <tabstop>genreBox</tabstop>
+  <tabstop>fileNameBox</tabstop>
+  <tabstop>trackEnable</tabstop>
+  <tabstop>trackSpin</tabstop>
+  <tabstop>lengthBox</tabstop>
+  <tabstop>yearEnable</tabstop>
+  <tabstop>yearSpin</tabstop>
+  <tabstop>bitrateBox</tabstop>
+  <tabstop>commentEnable</tabstop>
+  <tabstop>commentBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>artistNameEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>artistNameBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trackNameEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>trackNameBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>albumNameEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>albumNameBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>genreEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>genreBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trackEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>trackSpin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>567</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>commentEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>commentBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yearEnable</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>yearSpin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>766</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>artistNameBox</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>-7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trackNameBox</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>albumNameBox</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>genreBox</sender>
+   <signal>editTextChanged(QString)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>commentBox</sender>
+   <signal>textChanged()</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>540</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trackSpin</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yearSpin</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>TagEditor</receiver>
+   <slot>slotDataChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>704</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>685</x>
+     <y>-6</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotDataChanged()</slot>
+ </slots>
+</ui>
